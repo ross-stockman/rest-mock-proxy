@@ -12,6 +12,20 @@ This tool is specifically designed to unblock UI development by allowing develop
 - **CORS Enabled**: Pre-configured to handle Cross-Origin Resource Sharing, making it easy to use with local React/Vue/Angular development.
 - **Hot Reloading**: Uses `tsx` to instantly restart the server whenever you save a file.
 
+## 📊 How it Works
+
+```mermaid
+graph TD
+    UI[Frontend UI] -- HTTP Request --> Proxy[Rest-Mock-Proxy]
+    
+    Proxy -- "1. Matches Mock?" --> Mock{Mock Found?}
+    Mock -- Yes --> Response[Return Stubbed JSON]
+    Mock -- No --> Backend[Forward to Real Backend]
+    
+    Response -- HTTP Response --> UI
+    Backend -- HTTP Response --> UI
+```
+
 ## 🛠️ Prerequisites
 
 - [Node.js](https://nodejs.org/) (v18 or higher recommended)
