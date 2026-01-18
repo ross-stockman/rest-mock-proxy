@@ -1,0 +1,37 @@
+{
+  "name": "rest-mock-proxy",
+  "version": "1.0.0",
+  "description": "This is a tool that acts as both a mock and a proxy, and is specifically designed to unblock UI development",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ross-stockman/rest-mock-proxy.git"
+  },
+  "keywords": [],
+  "author": "ross-stockman",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ross-stockman/rest-mock-proxy/issues"
+  },
+  "homepage": "https://github.com/ross-stockman/rest-mock-proxy#readme",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.9",
+    "nodemon": "^3.1.11",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "http-proxy-middleware": "^3.0.5"
+  }
+}
